@@ -7,7 +7,7 @@
   > Semester: 3rd Sem B. Tech. CSE
   > Section: S2 <br>
   > Team ID: S2-T12 <br>
-  > Member-1: Parihasa K Reddy, 231CS239, parihasakreddy.231cs239@nitk.edu.in <br>
+  > Member-1: Parihasa K Reddy, 231CS239, <a>parihasakreddy.231cs239@nitk.edu.in</a>  <br>
   > Member-2: R Sairam, 231CS245, sairam.231cs245@nitk.edu.in <br>
   > Member-3: Rishi Ramesh, 231CS248, rishiramesh.231cs248@nitk.edu.in <br>
 </details>
