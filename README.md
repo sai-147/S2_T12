@@ -3,13 +3,13 @@
 <details>
   <summary>Team Details</summary>
       
-      | **Semester**: 3rd Sem B. Tech. CSE
+      | Semester: 3rd Sem B. Tech. CSE
       
-      | **Section**: S1/S2  
+      | Section: S2  
       
-      | **Team ID**:  
+      | Team ID:  S2_T12
       
-      | **Member-1**: Name, Roll No., email  
+      | Member-1: Parihasa K Reddy, 231CS239, parihaskreddy.231cs239@nitk.edu.in  
       
       | **Member-2**: Name, Roll No., email  
       
