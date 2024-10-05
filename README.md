@@ -3,11 +3,16 @@
 <details>
   <summary>Team Details</summary>
   
-  | **Semester**: 3rd Sem B. Tech. CSE  
+  | **Semester**: 3rd Sem B. Tech. CSE
+  
   | **Section**: S1/S2  
+  
   | **Team ID**:  
+  
   | **Member-1**: Name, Roll No., email  
+  
   | **Member-2**: Name, Roll No., email  
+  
   | **Member-3**: Name, Roll No., email  
 
 </details>
