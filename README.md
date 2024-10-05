@@ -4,20 +4,28 @@ DDS Mini Project
 
 <details>
   <summary>Team Details</summary>
-  <p>Detail</p>
+  
+  - **Semester**: 3rd Sem B. Tech. CSE
+  - **Section**: S1/S2
+  - **Team ID**: 
+  - **Member-1**: Name, Roll No., email
+  - **Member-2**: Name, Roll No., email
+  - **Member-3**: Name, Roll No., email
+
 </details>
 
 <details>
   <summary>Abstract</summary>
-  <p>Detail</p>
+  <p>Provide the abstract of your project here.</p>
 </details>
 
 <details>
   <summary>Functional Block Diagram</summary>
-  <p>Detail</p>
+  <p>Provide details about your functional block diagram here.</p>
 </details>
 
 <details>
   <summary>Working</summary>
-  <p>Detail</p>
+  <p>Describe the working of your project here.</p>
 </details>
+
