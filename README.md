@@ -1,4 +1,10 @@
-> Semester: 3rd Sem B. Tech. CSE
+# Write your mini-project title
+
+<!-- First Section -->
+## Team Details
+<details>
+  <summary>Detail</summary>
+  > Semester: 3rd Sem B. Tech. CSE
   > Section: S2 <br>
   > Team ID: S2-T12 <br>
   > Member-1: Parihasa K Reddy, 231CS239, parihasakreddy.231cs239@nitk.edu.in <br>
