@@ -71,7 +71,13 @@
 <details>
   <summary>Detail</summary>
   
-> BBC News. *India train crash: At least 275 dead in Odisha, 2023*. Accessed: 2024-09-30.  
-   [(https://www.bbc.com/news)](https://www.bbc.com/news/world-asia-india-65793257)
-   
+> Simple Priority Arbiters: Allocating Resources in Embedded Systems with VHDL and Logisim  
+   (https://www.allaboutcircuits.com/technical-articles/simple-priority-arbiters-allocating-resources-in-embedded-systems-with-vhdl-and-logisim/)
+> M. Morris Mano and Michael D. Ciletti 
+(https://ia800607.us.archive.org/3/items/DigitalLogicAndComputerDesignByM.MorrisMano2ndEdition/Digital%20Logic%20And%20Computer%20Design%20By%20M.%20Morris%20Mano%20%282nd%20Edition%29.pdf)
+> Verilog Tutorial
+   (https://www.asic-world.com/verilog/veritut.html)
+> Digital Electronics - Shift Registers
+(https://www.tutorialspoint.com/digital_electronics/digital_electronics_shift_registers.htm)
+
 </details>
