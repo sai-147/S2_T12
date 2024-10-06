@@ -72,12 +72,12 @@
   <summary>Detail</summary>
   
 > Simple Priority Arbiters: Allocating Resources in Embedded Systems with VHDL and Logisim  
-   (https://www.allaboutcircuits.com/technical-articles/simple-priority-arbiters-allocating-resources-in-embedded-systems-with-vhdl-and-logisim/)
+   (https://www.allaboutcircuits.com/technical-articles/simple-priority-arbiters-allocating-resources-in-embedded-systems-with-vhdl-and-logisim/) <br>
 > M. Morris Mano and Michael D. Ciletti 
-(https://ia800607.us.archive.org/3/items/DigitalLogicAndComputerDesignByM.MorrisMano2ndEdition/Digital%20Logic%20And%20Computer%20Design%20By%20M.%20Morris%20Mano%20%282nd%20Edition%29.pdf)
+(https://ia800607.us.archive.org/3/items/DigitalLogicAndComputerDesignByM.MorrisMano2ndEdition/Digital%20Logic%20And%20Computer%20Design%20By%20M.%20Morris%20Mano%20%282nd%20Edition%29.pdf) <br>
 > Verilog Tutorial
-   (https://www.asic-world.com/verilog/veritut.html)
+   (https://www.asic-world.com/verilog/veritut.html) <br>
 > Digital Electronics - Shift Registers
-(https://www.tutorialspoint.com/digital_electronics/digital_electronics_shift_registers.htm)
+(https://www.tutorialspoint.com/digital_electronics/digital_electronics_shift_registers.htm) <br>
 
 </details>
