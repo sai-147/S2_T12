@@ -35,7 +35,7 @@
 </details>
 
 ## Functional Block Diagram
-	[your-image-link.png](https://github.com/sai-147/S2_T12/blob/main/Snapshots/DDS%20Block%20Diagram.png?raw=true)
+	<a href="">(https://github.com/sai-147/S2_T12/blob/main/Snapshots/DDS%20Block%20Diagram.png?raw=true)</a>
 
   <summary>Detail</summary>
  
