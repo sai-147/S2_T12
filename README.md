@@ -47,8 +47,7 @@
 <details>
   <summary>Detail</summary>
 
-  > Explain how your model works with the help of a functional table (compulsory) followed by the flowchart.
-  > ![WhatsApp Image 2024-10-06 at 21 09 10_eae3497b](https://github.com/user-attachments/assets/21cdb859-00cb-4638-8408-20d1fe5f0f42)
+  > Explain how your model works with the help of a functional table (compulsory) followed by the flowchart. 
 
 </details>
 
