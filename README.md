@@ -37,7 +37,8 @@
 ## Functional Block Diagram
 	<details>
   <summary>Detail</summary>
-  
+
+  ![Functional Block Diagram](your-image-link.png)
  
 </details>
 
