@@ -35,10 +35,11 @@
 </details>
 
 ## Functional Block Diagram
-	<a href="">(https://github.com/sai-147/S2_T12/blob/main/Snapshots/DDS%20Block%20Diagram.png?raw=true)</a>
-
+<details>
   <summary>Detail</summary>
- 
+  
+  ![Functional Block Diagram](https://github.com/sai-147/S2_T12/blob/main/Snapshots/DDS%20Block%20Diagram.png?raw=true)
+
 </details>
 
 <!-- Third Section -->
