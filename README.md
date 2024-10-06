@@ -35,10 +35,9 @@
 </details>
 
 ## Functional Block Diagram
-	<details>
-  <summary>Detail</summary>
+	![WhatsApp Image 2024-10-06 at 21 09 10_eae3497b](https://github.com/user-attachments/assets/c9103baf-a3e1-4548-a9d8-e22aa20d66fc)
 
-  ![Functional Block Diagram]([your-image-link.png](https://github.com/sai-147/S2_T12/blob/main/Snapshots/DDS%20Block%20Diagram.png?raw=true))
+  <summary>Detail</summary>
  
 </details>
 
