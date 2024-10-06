@@ -4,6 +4,7 @@
 ## Team Details
 <details>
   <summary>Detail</summary>
+	
   >Semester: 3rd Sem B. Tech. CSE
 	
   >Section: S2
