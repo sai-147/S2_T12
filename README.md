@@ -5,11 +5,11 @@
 <details>
   <summary>Detail</summary>
   > Semester: 3rd Sem B. Tech. CSE
-  > Section: S2 <br>
-  > Team ID: S2-T12 <br>
-  > Member-1: Parihasa K Reddy, 231CS239, <a href=""> parihasakreddy.231cs239@nitk.edu.in</a>  <br>
-  > Member-2: R Sairam, 231CS245, <a href=""> sairam.231cs245@nitk.edu.in </a><br>
-  > Member-3: Rishi Ramesh, 231CS248,<a href=""> rishiramesh.231cs248@nitk.edu.in </a><br>
+  > Section: S2 
+  > Team ID: S2-T12 
+  > Member-1: Parihasa K Reddy, 231CS239, <a href=""> parihasakreddy.231cs239@nitk.edu.in</a>  
+  > Member-2: R Sairam, 231CS245, <a href=""> sairam.231cs245@nitk.edu.in </a>
+  > Member-3: Rishi Ramesh, 231CS248,<a href=""> rishiramesh.231cs248@nitk.edu.in </a>
 </details>
 <!-- Second Section -->
 
