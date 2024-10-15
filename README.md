@@ -61,6 +61,7 @@
   > Update a neat logisim circuit diagram
 </details>
 
+
 <!-- Fifth Section -->
 ## Verilog Code
 <details>
