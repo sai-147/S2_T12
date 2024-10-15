@@ -57,7 +57,7 @@
 ## Logisim Circuit Diagram
 <details>
   <summary>Detail</summary>
-  ([https://raw.githubusercontent.com/sai-147/S2_T12/refs/heads/main/Snapshots/main.png](https://github.com/sai-147/S2_T12/blob/main/Snapshots/main.png))
+  ![Main Circuit]([https://raw.githubusercontent.com/sai-147/S2_T12/refs/heads/main/Snapshots/main.png](https://github.com/sai-147/S2_T12/blob/main/Snapshots/main.png))
   > Update a neat logisim circuit diagram
 </details>
 
