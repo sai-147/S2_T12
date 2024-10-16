@@ -49,6 +49,13 @@
 <details>
   <summary>Detail</summary>
 
+**Description**
+There are 7 inputs in decimal numbers along with candidate, clear, clock, load, store, and enable switches. We take input from a number of candidates ranging from 1 to 7 (using switches D1 to D7) by applying the candidate switch and storing it in a register using the store button. We put the number of candidates into the down counter using the load and clock switches. We simultaneously calculate the tokens based on the counter value.
+
+Disable the candidate switch and take inputs for score calculation using switches D1 to D4 for each candidate and store them in the corresponding register-based token generated. After calculating and storing the scores of each candidate, we send the values of registers to the comparator (using the Bitonic sorting algorithm). The top 3 candidates with the highest scores are selected; if there are ties, priority is given to the lesser value of the token, and their token values are displayed in order.
+
+---
+
 The following components were used in the design:
 
 - **Switches (D1 to D7)**: These switches are used to take input from candidates. The score switches (D1 to D4) are particularly used for score calculation.
