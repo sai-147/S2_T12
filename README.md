@@ -438,7 +438,11 @@ module sort_last_4_bits (
 endmodule
 ```
 </details>
+
   ### Behavioural modeling
+  <details>
+  <summary>Detail</summary>
+	  
   ```Verilog
 module main (
     input [3:0] n,
@@ -632,6 +636,8 @@ module sort_last_4_bits (
 
 endmodule
 ```
+</details>
+
   ### Testbench
   ```Verilog
 module main_tb;
