@@ -50,6 +50,7 @@
   <summary>Detail</summary>
 
 **Description:** <br>
+
 There are 7 inputs in decimal numbers along with candidate, clear, clock, load, store, and enable switches. We take input from a number of candidates ranging from 1 to 7 (using switches D1 to D7) by applying the candidate switch and storing it in a register using the store button. We put the number of candidates into the down counter using the load and clock switches. We simultaneously calculate the tokens based on the counter value.
 
 Disable the candidate switch and take inputs for score calculation using switches D1 to D4 for each candidate and store them in the corresponding register-based token generated. After calculating and storing the scores of each candidate, we send the values of registers to the comparator (using the Bitonic sorting algorithm). The top 3 candidates with the highest scores are selected; if there are ties, priority is given to the lesser value of the token, and their token values are displayed in order.
@@ -68,16 +69,9 @@ The following components were used in the design:
 - **Subtractor**: It calculates the difference between two binary numbers, assisting in score comparison.
 - **Bit Extender**: Extends the bit-width of input data to match the desired format for processing.
 
-**Process Overview**:
-1. Candidates input their values using switches D1 to D7.
-2. The number of candidates is loaded into the down counter using the `load` and `clock` switches.
-3. Scores are input using switches D1 to D4 and stored in corresponding registers.
-4. The Bitonic sorting algorithm compares scores to identify the top 3 candidates, breaking ties based on token values.
-5. The results are displayed, prioritizing candidates with higher scores or, in the event of a tie, those with lower token values.
-
 ---
 
-![Score Calculation Truth Table](Score_Calculation.png)
+[Score_Calculation.png](https://github.com/sai-147/S2_T12/blob/main/Snapshots/Down%20Counter_Truth%20Table.png?raw=true)
 _Figure: Truth Table for Score Calculation_
 
 The simplified boolean expressions for the score calculation switches when the score switch is `1` are as follows:
