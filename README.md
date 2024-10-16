@@ -639,6 +639,9 @@ endmodule
 </details>
 
   ### Testbench
+  <details>
+  <summary>Detail</summary>
+	  
   ```Verilog
 module main_tb;
 
@@ -682,6 +685,8 @@ module main_tb;
     end 
 endmodule
 ```
+</details>
+
 </details>
 
 ## References
