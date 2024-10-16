@@ -57,10 +57,11 @@
 ## Logisim Circuit Diagram
 <details>
   <summary>Detail</summary>
-	
+
+  ### Main Circuit
   ![Main Circuit](https://raw.githubusercontent.com/sai-147/S2_T12/main/Snapshots/main.png) <br>
   
-  >*Counter Circuit*
+  ### Counter Circuit
   ![Token Counter Circuit](https://github.com/sai-147/S2_T12/blob/main/Snapshots/Counter.png?raw=true)
 </details>
 
