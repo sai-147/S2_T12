@@ -443,6 +443,7 @@ endmodule
   <details>
   <summary>Detail</summary>
 	  
+  #### Main module
   ```Verilog
 module main (
     input [3:0] n,
@@ -498,6 +499,9 @@ module main (
 
 endmodule
 
+```
+#### Score module
+```Verilog
 `ifndef SCORE_V
 `define SCORE_V
 module score_calculator(
@@ -528,7 +532,9 @@ end
 
 endmodule
 `endif
-
+```
+#### Token module
+```Verilog
 `ifndef TOKEN_V
 `define TOKEN_V
 
@@ -572,7 +578,9 @@ module token (
 
 endmodule
 `endif
-
+```
+#### Sort module
+```Verilog
 module sort_last_4_bits (
     input wire [7:0] num0,
     input wire [7:0] num1,
@@ -635,6 +643,7 @@ module sort_last_4_bits (
     end
 
 endmodule
+
 ```
 </details>
 
