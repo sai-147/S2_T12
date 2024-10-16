@@ -132,45 +132,546 @@ _Figure 2: 3-Bit Down Counter (7 to 0)_
 
   ### Gate-level modeling
 
+```Verilog
+`ifndef SCORE_V
+`define SCORE_V
+module score_calculator(
+    input wire d1,     // Input for score 1
+    input wire d2,     // Input for score 2
+    input wire d3,     // Input for score 3
+    input wire d4,     // Input for score 4
+    //input wire score_btn, // Button to score the inputs
+    output reg [3:0] score // 4-bit output for the final score
+);
+wire d1_d2, d1_d3, d1_d4, d2_d3, d2_d4, d3_d4;
+wire d1_not, d2_not, d3_not, d4_not;
+
+// NOT gates for input inversions
+not (d1_not, d1);
+not (d2_not, d2);
+not (d3_not, d3);
+not (d4_not, d4);
+
+// AND gates for scoring
+and (d1_d2, d1, d2);
+and (d1_d3, d1, d3);
+and (d1_d4, d1, d4);
+and (d2_d3, d2, d3);
+and (d2_d4, d2, d4);
+and (d3_d4, d3, d4);
+
+// OR gates for scoring
+or (score[0], d1, d1_d2, d1_d3, d1_d4);
+or (score[1], d2, d1_d2, d2_d3, d2_d4);
+or (score[2], d3, d1_d3, d2_d3, d3_d4);
+or (score[3], d4, d1_d4, d2_d4, d3_d4);
+
+endmodule
+`endif
+
+`ifndef TOKEN_V
+`define TOKEN_V
+
+module token (
+    input  [3:0] value, 
+    output reg [3:0] token1,
+    output reg [3:0] token2,
+    output reg [3:0] token3,
+    output reg [3:0] token4,
+    output reg [3:0] token5,
+    output reg [3:0] token6,
+    output reg [3:0] token7
+);
+
+    // Gate-level implementation
+
+    // 4-bit counter using JK flip-flops
+    wire clk, reset;
+    assign clk = 1'b1; // Clock signal (always high)
+    assign reset = 1'b0; // Reset signal (always low)
+    wire [3:0] count;
+    
+    jk_ff_gate jk_ff0 (clk, reset, 1'b1, 1'b1, count[0]);
+    jk_ff_gate jk_ff1 (clk, reset, count[0], 1'b1, count[1]);
+    jk_ff_gate jk_ff2 (clk, reset, count[1], count[0], count[2]);
+    jk_ff_gate jk_ff3 (clk, reset, count[2], count[1], count[3]);
+
+    // 7-to-1 multiplexer using basic gates
+    wire token_out0, token_out1, token_out2, token_out3;
+    wire token_out4, token_out5, token_out6;
+
+    and (token_out0, count[2], count[1], count[0]); // count = 000
+    and (token_out1, count[2], count[1], not(count[0])); // count = 001
+    and (token_out2, count[2], not(count[1]), count[0]); // count = 010
+    and (token_out3, count[2], not(count[1]), not(count[0])); // count = 011
+    and (token_out4, not(count[2]), count[1], count[0]); // count = 100
+    and (token_out5, not(count[2]), count[1], not(count[0])); // count = 101
+    and (token_out6, not(count[2]), not(count[1]), count[0]); // count = 110
+
+    wire token_out_combined;
+    or (token_out_combined, token_out0, token_out1, token_out2, token_out3, token_out4, token_out5, token_out6);
+
+    // Assign token outputs based on the selected token
+    always @(*) begin
+        token1 = 4'b0000;
+        token2 = 4'b0000;
+        token3 = 4'b0000;
+        token4 = 4'b0000;
+        token5 = 4'b0000;
+        token6 = 4'b0000;
+        token7 = 4'b0000;
+
+        case (count)
+            4'b0000: token1 = token_out_combined ? value : 4'b0000; // Assign value if token condition met
+            4'b0001: token2 = token_out_combined ? value : 4'b0000;
+            4'b0010: token3 = token_out_combined ? value : 4'b0000;
+            4'b0011: token4 = token_out_combined ? value : 4'b0000;
+            4'b0100: token5 = token_out_combined ? value : 4'b0000;
+            4'b0101: token6 = token_out_combined ? value : 4'b0000;
+            4'b0110: token7 = token_out_combined ? value : 4'b0000;
+        endcase
+    end
+
+endmodule
+
+// JK flip-flop using logic gates
+module jk_ff_gate (
+    input  clk,
+    input  reset,
+    input  j,
+    input  k,
+    output reg q
+);
+
+    wire s, r;
+
+    // Logic for setting and resetting
+    and (s, j, not(q));
+    and (r, k, q);
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            q <= 1'b0;
+        end else begin
+            or (q, s, r);
+        end
+    end
+
+endmodule
+
+`endif
+
+module comparator_4bit (
+    input [3:0] a,
+    input [3:0] b,
+    output gt,   // a > b
+    output eq    // a == b
+);
+    wire xnor3, xnor2, xnor1, xnor0;
+    wire a_gt_b3, a_gt_b2, a_gt_b1, a_gt_b0;
+
+    // Equality check for each bit using XNOR
+    xnor (xnor3, a[3], b[3]);
+    xnor (xnor2, a[2], b[2]);
+    xnor (xnor1, a[1], b[1]);
+    xnor (xnor0, a[0], b[0]);
+
+    // a == b (all bits must be equal)
+    and (eq, xnor3, xnor2, xnor1, xnor0);
+
+    // Greater than logic using AND and OR gates
+    and (a_gt_b3, a[3], ~b[3]);
+    and (a_gt_b2, xnor3, a[2], ~b[2]);
+    and (a_gt_b1, xnor3, xnor2, a[1], ~b[1]);
+    and (a_gt_b0, xnor3, xnor2, xnor1, a[0], ~b[0]);
+
+    or (gt, a_gt_b3, a_gt_b2, a_gt_b1, a_gt_b0);
+
+endmodule
+module mux_8bit (
+    input [7:0] a,
+    input [7:0] b,
+    input sel,       // 1 = swap, 0 = no swap
+    output [7:0] out_a,
+    output [7:0] out_b
+);
+    wire not_sel;
+    wire [7:0] and_a, and_b;
+
+    // Invert the select signal
+    not (not_sel, sel);
+
+    // Conditional swapping using AND and OR gates
+    // If sel = 1, swap; if sel = 0, keep original
+    and (and_a[0], a[0], not_sel);
+    and (and_b[0], b[0], sel);
+    or (out_a[0], and_a[0], and_b[0]);
+
+    and (and_a[1], a[1], not_sel);
+    and (and_b[1], b[1], sel);
+    or (out_a[1], and_a[1], and_b[1]);
+
+    and (and_a[2], a[2], not_sel);
+    and (and_b[2], b[2], sel);
+    or (out_a[2], and_a[2], and_b[2]);
+
+    and (and_a[3], a[3], not_sel);
+    and (and_b[3], b[3], sel);
+    or (out_a[3], and_a[3], and_b[3]);
+
+    and (and_a[4], a[4], not_sel);
+    and (and_b[4], b[4], sel);
+    or (out_a[4], and_a[4], and_b[4]);
+
+    and (and_a[5], a[5], not_sel);
+    and (and_b[5], b[5], sel);
+    or (out_a[5], and_a[5], and_b[5]);
+
+    and (and_a[6], a[6], not_sel);
+    and (and_b[6], b[6], sel);
+    or (out_a[6], and_a[6], and_b[6]);
+
+    and (and_a[7], a[7], not_sel);
+    and (and_b[7], b[7], sel);
+    or (out_a[7], and_a[7], and_b[7]);
+
+    // For b output (opposite of a)
+    and (and_a[0], a[0], sel);
+    and (and_b[0], b[0], not_sel);
+    or (out_b[0], and_a[0], and_b[0]);
+
+    and (and_a[1], a[1], sel);
+    and (and_b[1], b[1], not_sel);
+    or (out_b[1], and_a[1], and_b[1]);
+
+    and (and_a[2], a[2], sel);
+    and (and_b[2], b[2], not_sel);
+    or (out_b[2], and_a[2], and_b[2]);
+
+    and (and_a[3], a[3], sel);
+    and (and_b[3], b[3], not_sel);
+    or (out_b[3], and_a[3], and_b[3]);
+
+    and (and_a[4], a[4], sel);
+    and (and_b[4], b[4], not_sel);
+    or (out_b[4], and_a[4], and_b[4]);
+
+    and (and_a[5], a[5], sel);
+    and (and_b[5], not_sel, b[5]);
+    or (out_b[5], and_a[5], and_b[5]);
+
+    and (and_a[6], a[6], sel);
+    and (and_b[6], b[6], not_sel);
+    or (out_b[6], and_a[6], and_b[6]);
+
+    and (and_a[7], a[7], sel);
+    and (and_b[7], b[7], not_sel);
+    or (out_b[7], and_a[7], and_b[7]);
+
+endmodule
+module comparator_8bit (
+    input [7:0] a,
+    input [7:0] b,
+    output swap
+);
+
+    wire gt_last4, eq_last4, gt_first4;
+
+    // Compare last 4 bits (bitwise comparator logic)
+    comparator_4bit cmp_last4 (
+        .a(a[3:0]),
+        .b(b[3:0]),
+        .gt(gt_last4),
+        .eq(eq_last4)
+    );
+
+    // Compare first 4 bits
+    comparator_4bit cmp_first4 (
+        .a(a[7:4]),
+        .b(b[7:4]),
+        .gt(gt_first4),
+        .eq()   // No need for equality of first 4 bits
+    );
+
+    // Swap condition: a > b on last 4 bits or equal and first 4 bits swap
+    or (swap, gt_last4, eq_last4, gt_first4);
+
+endmodule
+
+module sort_last_4_bits (
+    input [7:0] num0, num1, num2, num3, num4, num5, num6, num7,
+    output [7:0] sorted0, sorted1, sorted2, sorted3, sorted4, sorted5, sorted6, sorted7
+);
+    wire [7:0] sort0, sort1, sort2, sort3, sort4, sort5, sort6, sort7;
+    wire swap0, swap1, swap2, swap3, swap4, swap5, swap6;
+
+    // First round of comparisons and swaps
+    comparator_8bit cmp0 (num0, num1, swap0);
+    mux_8bit mux0 (num0, num1, swap0, sort0, sort1);
+    
+    comparator_8bit cmp1 (num2, num3, swap1);
+    mux_8bit mux1 (num2, num3, swap1, sort2, sort3);
+
+    comparator_8bit cmp2 (num4, num5, swap2);
+    mux_8bit mux2 (num4, num5, swap2, sort4, sort5);
+
+    comparator_8bit cmp3 (num6, num7, swap3);
+    mux_8bit mux3 (num6, num7, swap3, sort6, sort7);
+
+    // Second pass (Bubble sort second iteration) – repeat for full sorting
+    comparator_8bit cmp4 (sort0, sort1, swap4);
+    mux_8bit mux4 (sort0, sort1, swap4, sorted0, sorted1);
+
+    comparator_8bit cmp5 (sort2, sort3, swap5);
+    mux_8bit mux5 (sort2, sort3, swap5, sorted2, sorted3);
+
+    comparator_8bit cmp6 (sort4, sort5, swap6);
+    mux_8bit mux6 (sort4, sort5, swap6, sorted4, sorted5);
+
+    // Final sorted values
+    assign sorted6 = sort6;
+    assign sorted7 = sort7;
+
+endmodule
+```
+  ### Behavioural modeling
   ```Verilog
-  module Priority_Seat_Allocation (
-      input [6:0] candidate,      // 7 candidate inputs
-      input [3:0] scores,         // Score inputs for each candidate
-      input clk,                  // Clock signal
-      input load,                 // Load signal
-      input store,                // Store signal
-      input clear,                // Clear signal
-      output reg [6:0] tokens,    // Output tokens
-      output reg [3:0] selected   // Selected candidate based on priority
-  );
+module main (
+    input [3:0] n,
+    input [3:0] c1, c2, c3, c4, c5, c6, c7,
+    output [3:0] r1, r2, r3
+);
 
-  reg [3:0] candidate_scores [0:6]; // Array to hold scores for candidates
+    wire [3:0] s1, s2, s3, s4, s5, s6, s7;
+    wire [3:0] t1, t2, t3, t4, t5, t6, t7;
+    
+    // Score Calculators
+    score_calculator S1 (.d1(c1[3]), .d2(c1[2]), .d3(c1[1]), .d4(c1[0]), .score(s1));
+    score_calculator S2 (.d1(c2[3]), .d2(c2[2]), .d3(c2[1]), .d4(c2[0]), .score(s2));
+    score_calculator S3 (.d1(c3[3]), .d2(c3[2]), .d3(c3[1]), .d4(c3[0]), .score(s3));
+    score_calculator S4 (.d1(c4[3]), .d2(c4[2]), .d3(c4[1]), .d4(c4[0]), .score(s4));
+    score_calculator S5 (.d1(c5[3]), .d2(c5[2]), .d3(c5[1]), .d4(c5[0]), .score(s5));
+    score_calculator S6 (.d1(c6[3]), .d2(c6[2]), .d3(c6[1]), .d4(c6[0]), .score(s6));
+    score_calculator S7 (.d1(c7[3]), .d2(c7[2]), .d3(c7[1]), .d4(c7[0]), .score(s7));
 
-  always @(posedge clk) begin
-      if (clear) begin
-          tokens <= 7'b0; // Clear tokens
-          selected <= 4'b0; // Clear selected candidate
-      end
-      if (load) begin
-          candidate_scores[candidate] <= scores; // Load scores for candidates
-      end
-      if (store) begin
-          // Logic to calculate tokens based on loaded scores
-          // (example logic)
-          tokens <= tokens + 1; // Update tokens
-      end
-  end
+    // Token Generation
+    token TOKEN (
+        .value(n),
+        .token1(t1), .token2(t2), .token3(t3),
+        .token4(t4), .token5(t5), .token6(t6), .token7(t7)
+    );
 
-  always @(*) begin
-      // Comparator logic for determining selected candidate based on scores
-      // Implement bitonic sort or another selection logic here
-      // For example:
-      selected = (candidate_scores[0] > candidate_scores[1]) ? 0 : 1; // Simple comparison for demonstration
-  end
-  endmodule
+    // Declare temp and sorted arrays
+    wire [7:0] temp [0:7];  // 8 entries of 8 bits each
+    wire [7:0] sorted [0:7]; // 8 entries of 8 bits each
 
-  
-</details>```
+    // Assign values to the temp array
+    assign temp[0] = {4'b0000, 4'b0000};  
+    assign temp[1] = {t1, s1};
+    assign temp[2] = {t2, s2};
+    assign temp[3] = {t3, s3};
+    assign temp[4] = {t4, s4};
+    assign temp[5] = {t5, s5};
+    assign temp[6] = {t6, s6};
+    assign temp[7] = {t7, s7};
+
+    // Sort Module
+    sort_last_4_bits uut (
+        .num0(temp[0]), .num1(temp[1]), .num2(temp[2]), .num3(temp[3]),
+        .num4(temp[4]), .num5(temp[5]), .num6(temp[6]), .num7(temp[7]),
+        .sorted0(sorted[0]), .sorted1(sorted[1]), .sorted2(sorted[2]), .sorted3(sorted[3]),
+        .sorted4(sorted[4]), .sorted5(sorted[5]), .sorted6(sorted[6]), .sorted7(sorted[7])
+    );
+
+    // Assigning outputs from sorted array
+    assign r1 = sorted[7][7:4]; 
+    assign r2 = sorted[6][7:4]; 
+    assign r3 = sorted[5][7:4];
+
+endmodule
+
+`ifndef SCORE_V
+`define SCORE_V
+module score_calculator(
+    input wire d1,     // Input for score 1
+    input wire d2,     // Input for score 2
+    input wire d3,     // Input for score 3
+    input wire d4,     // Input for score 4
+    //input wire score_btn, // Button to score the inputs
+    output reg [3:0] score // 4-bit output for the final score
+);
+wire d1_d2, d1_d3, d1_d4, d2_d3, d2_d4, d3_d4;
+wire d1_not, d2_not, d3_not, d4_not;
+
+
+always @(*) begin
+    // Initialize score to zero
+    score = 4'b0000;
+    
+    // Check if the score button is pressed
+    begin
+        // Calculate the sum based on active inputs
+        if (d1) score = score + 4'b0001; // Add 1 for d1
+        if (d2) score = score + 4'b0010; // Add 2 for d2
+        if (d3) score = score + 4'b0011; // Add 3 for d3
+        if (d4) score = score + 4'b0100; // Add 4 for d4
+    end
+end
+
+endmodule
+`endif
+
+`ifndef TOKEN_V
+`define TOKEN_V
+
+module token (
+    input  [3:0] value, 
+    output reg [3:0] token1,
+    output reg [3:0] token2,
+    output reg [3:0] token3,
+    output reg [3:0] token4,
+    output reg [3:0] token5,
+    output reg [3:0] token6,
+    output reg [3:0] token7
+);
+
+    integer i;
+
+    always @(*) begin
+        // Initialize all tokens to 0
+        token1 = 4'b0000;
+        token2 = 4'b0000;
+        token3 = 4'b0000;
+        token4 = 4'b0000;
+        token5 = 4'b0000;
+        token6 = 4'b0000;
+        token7 = 4'b0000;
+
+        // Generate tokens based on the input value (limit to 7)
+        for (i = 0; i < value && i < 7; i = i + 1) begin
+            case (i)
+                0: token1 = i + 1;
+                1: token2 = i + 1;
+                2: token3 = i + 1;
+                3: token4 = i + 1;
+                4: token5 = i + 1;
+                5: token6 = i + 1;
+                6: token7 = i + 1;
+                default: ; 
+            endcase
+        end
+    end
+
+endmodule
+`endif
+
+module sort_last_4_bits (
+    input wire [7:0] num0,
+    input wire [7:0] num1,
+    input wire [7:0] num2,
+    input wire [7:0] num3,
+    input wire [7:0] num4,
+    input wire [7:0] num5,
+    input wire [7:0] num6,
+    input wire [7:0] num7,
+    output reg [7:0] sorted0,
+    output reg [7:0] sorted1,
+    output reg [7:0] sorted2,
+    output reg [7:0] sorted3,
+    output reg [7:0] sorted4,
+    output reg [7:0] sorted5,
+    output reg [7:0] sorted6,
+    output reg [7:0] sorted7
+);
+
+    reg [7:0] sorted [0:7];
+    integer i, j;
+
+    // Combinational logic for sorting based on last 4 bits
+    always @(*) begin
+        // Initialize sorted array with input values
+        sorted[0] = num0;
+        sorted[1] = num1;
+        sorted[2] = num2;
+        sorted[3] = num3;
+        sorted[4] = num4;
+        sorted[5] = num5;
+        sorted[6] = num6;
+        sorted[7] = num7;
+
+        // Bubble sort on the last 4 bits and, if equal, compare first 4 bits
+        for (i = 0; i < 7; i = i + 1) begin
+            for (j = 0; j < 7 - i; j = j + 1) begin
+                if (sorted[j][3:0] > sorted[j + 1][3:0]) begin
+                    // Swap if last 4 bits of j are greater than j+1
+                    {sorted[j], sorted[j + 1]} = {sorted[j + 1], sorted[j]};
+                end else if (sorted[j][3:0] == sorted[j + 1][3:0]) begin
+                    // If last 4 bits are equal, compare first 4 bits
+                    if (sorted[j][7:4] < sorted[j + 1][7:4]) begin
+                        // Swap if the first 4 bits of j are smaller than j+1
+                        {sorted[j], sorted[j + 1]} = {sorted[j + 1], sorted[j]};
+                    end
+                end
+            end
+        end
+
+        // Assign sorted results to individual outputs
+        sorted0 = sorted[0];
+        sorted1 = sorted[1];
+        sorted2 = sorted[2];
+        sorted3 = sorted[3];
+        sorted4 = sorted[4];
+        sorted5 = sorted[5];
+        sorted6 = sorted[6];
+        sorted7 = sorted[7];
+    end
+
+endmodule
+```
+  ### Testbench
+  ```Verilog
+module main_tb;
+
+    reg [3:0]n;
+    reg [3:0] c1, c2, c3, c4, c5, c6, c7;
+    wire [3:0] r1, r2, r3;
+    
+    main test(
+        .n(n),
+        .c1(c1),
+        .c2(c2),
+        .c3(c3),
+        .c4(c4),
+        .c5(c5),
+        .c6(c6),
+        .c7(c7),
+        .r1(r1),
+        .r2(r2),
+        .r3(r3)
+    );
+
+    initial begin
+        n = 4'b0111;  // Set n to an initial value
+
+        // Setting up input values
+        c1 = 4'b1111;  // Corrected here
+        c2 = 4'b0011;  
+        c3 = 4'b0111;  
+        c4 = 4'b1111;
+        c5 = 4'b0111;
+        c6 = 4'b0100;
+        c7 = 4'b0111;
+
+        #10;  
+
+        // Displaying outputs
+        $monitor("SEAT1: %d, SEAT2: %d, SEAT3:%d  ", r1,r2,r3);
+        
+        // Ending simulation
+        $finish;
+    end 
+endmodule
+```
 
 ## References
 <details>
