@@ -27,9 +27,14 @@
 In many real-time systems, such as seat allocation in transportation or event management, it is crucial to ensure that resource allocation is done promptly and fairly, prioritizing individuals based on predefined criteria. A priority-based allocation system ensures that individuals with higher importance—such as those with urgent needs, loyalty status, or special permissions—are given preference when resources, like seats, are limited.
 
 A hardware-based solution for priority-based seat allocation not only ensures faster decision-making but also enhances reliability in dynamic and time-sensitive environments. This system can be vital in situations where delays or inefficient resource management could lead to dissatisfaction, safety risks, or lost opportunities.
+
+---
   
   ### Problem Statement
 In critical resource allocation environments like healthcare and transportation, managing waiting lists based on priority is essential. Conventional first-come, first-served methods neglect urgency, leading to inefficiencies. This project proposes a digital system for automated seat assignment that prioritizes requests, ensuring timely service and optimal resource utilization.
+
+---
+
   ### Features
 - **Real-Time Priority Assignment**: Assigns seats based on priority levels in real-time.
 - **Hardware-Based Implementation**: Utilizes digital circuits for efficient processing.
