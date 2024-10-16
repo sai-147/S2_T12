@@ -24,19 +24,19 @@
   <summary>Detail</summary>
 
   ### Motivation
-In many real-time systems, such as seat allocation in transportation or event management, it is crucial to ensure that resource allocation is done promptly and fairly, prioritizing individuals based on predefined criteria. A priority-based allocation system ensures that individuals with higher importance—such as those with urgent needs, loyalty status, or special permissions—are given preference when resources, like seats, are limited.
+In many real-time systems, such as seat allocation in transportation or event management, it is crucial to ensure that resource allocation is done promptly and fairly, prioritizing individuals based on predefined criteria. A priority-based allocation system ensures that individuals with higher importance—such as urgent needs, loyalty status, or special permissions—are given preference when resources, like seats, are limited.
 
-A hardware-based solution for priority-based seat allocation not only ensures faster decision-making but also enhances reliability in dynamic and time-sensitive environments. This system can be vital in situations where delays or inefficient resource management could lead to dissatisfaction, safety risks, or lost opportunities.
+A hardware-based solution for priority-based seat allocation ensures faster decision-making and enhances reliability in dynamic and time-sensitive environments. This system can be vital when delays or inefficient resource management could lead to dissatisfaction, safety risks, or lost opportunities.
 
 ---
   
   ### Problem Statement
-In critical resource allocation environments like healthcare and transportation, managing waiting lists based on priority is essential. Conventional first-come, first-served methods neglect urgency, leading to inefficiencies. This project proposes a digital system for automated seat assignment that prioritizes requests, ensuring timely service and optimal resource utilization.
+Managing waiting lists based on priority is essential in critical resource allocation environments like healthcare and transportation. Conventional first-come, first-served methods neglect urgency, leading to inefficiencies. This project proposes a digital system for automated seat assignment that prioritizes requests, ensuring timely service and optimal resource utilization.
 
 ---
 
   ### Features
-- **Real-Time Priority Assignment**: Assigns seats based on priority levels in real-time.
+- **Real-Time Priority Assignment**: Assign real-time seats based on priority levels.
 - **Hardware-Based Implementation**: Utilizes digital circuits for efficient processing.
 - **Dynamic Request Handling**: Adapts to changing request priorities effectively.
 - **Scalability and Adaptability**: Designed to accommodate varying system demands.
@@ -59,19 +59,19 @@ In critical resource allocation environments like healthcare and transportation,
 
 The system has 7 decimal inputs and several control switches (candidate, clear, clock, load, store, enable). We select 1-7 candidates via switches (D1-D7), store the selected candidate using the store button, and load the number of candidates into a down counter with the load and clock switches. Tokens are calculated based on the counter value.
 
-After disabling the candidate switch, score inputs for each candidate (using switches D1-D4) are stored in registers based on their tokens. The scores are then sent to a comparator, where the top 3 candidates are selected using the Bitonic sorting algorithm. In case of ties, priority is given to the lower token value, and their token values are displayed.
+After disabling the candidate switch, score inputs for each candidate (using switches D1-D4) are stored in registers based on their tokens. The scores are then sent to a comparator, where the top 3 candidates are selected using the Bitonic sorting algorithm. In the case of ties, priority is given to the lower token value, and their token values are displayed.
 
 ---
 
 The following components were used in the design:
 
-- **Switches (D1 to D7)**: These switches are used to take input from candidates. The score switches (D1 to D4) are particularly used for score calculation.
+- **Switches (D1 to D7)**: These switches take input from candidates. The score switches (D1 to D4) are particularly used for score calculation.
 - **Registers**: Registers store the candidates' scores and token values.
 - **Down Counter**: This component counts down from the number of candidates (ranging from 1 to 7) to 0, determining the token values.
 - **Comparator**: The Bitonic sorting algorithm compares the candidates' scores to rank them.
 - **Clock, Load, Store, Clear, Enable Switches**: These control the input/output processes, clock signals, and data storage.
 - **Bitonic Sorter**: A hardware-based comparator for sorting scores and determining the top 3 candidates based on their scores.
-- **MUX (Multiplexer)**: This is a digital switch that selects one of several input signals and forwards it to the output for comparison.
+- **MUX (Multiplexer)**: This digital switch selects one of several input signals and forwards it to the output for comparison.
 - **Subtractor**: It calculates the difference between two binary numbers, assisting in score comparison.
 - **Bit Extender**: Extends the bit-width of input data to match the desired format for processing.
 
@@ -130,7 +130,7 @@ _Figure 2: 3-Bit Down Counter (7 to 0)_
 <details>
   <summary>Detail</summary>
 
-  > Neatly update the Verilog code in code style only.
+  > Neatly update the Verilog code using code style only.
 </details>
 
 ## References
