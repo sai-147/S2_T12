@@ -711,7 +711,7 @@ endmodule
   CASE 2 <br>
    > Input <br>
   	![Input 2](https://github.com/sai-147/S2_T12/blob/main/Snapshots/input%202.png?raw=true) <br>
-    > Output <br>
+   > Output <br>
    	![Output 2](https://github.com/sai-147/S2_T12/blob/main/Snapshots/output%202.png?raw=true) <br>
   </details>
 
