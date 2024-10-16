@@ -71,7 +71,7 @@ The following components were used in the design:
 
 ---
 
-[Score_Calculation.png](https://github.com/sai-147/S2_T12/blob/main/Snapshots/Down%20Counter_Truth%20Table.png?raw=true)
+![Score_Calculation.png](https://github.com/sai-147/S2_T12/blob/main/Snapshots/Down%20Counter_Truth%20Table.png?raw=true)
 _Figure: Truth Table for Score Calculation_
 
 The simplified boolean expressions for the score calculation switches when the score switch is `1` are as follows:
