@@ -97,16 +97,13 @@
   <summary>Detail</summary>
 
   - Verilog Basics
-
-[(https://www.chipverify.com/verilog/verilog-tutorial)](https://www.chipverify.com/verilog/verilog-tutorial)
+	[https://www.chipverify.com/verilog/verilog-tutorial](https://www.chipverify.com/verilog/verilog-tutorial)
 
   - Digital System Design: Bitonic Sorter
+	[(https://digitalsystemdesign.in/bitonic-sorter/)](https://digitalsystemdesign.in/bitonic-sorter/)
 
-[(https://digitalsystemdesign.in/bitonic-sorter/)]
-(https://digitalsystemdesign.in/bitonic-sorter/)
-
-  - Verilog Tutorial  
-    [(https://www.asic-world.com/verilog/veritut.html)](https://www.asic-world.com/verilog/veritut.html)
+  - Priority-Based Scheduling in Embedded Systems Design  
+	[https://library.fiveable.me/key-terms/embedded-systems-design/priority-based-scheduling](https://library.fiveable.me/key-terms/embedded-systems-design/priority-based-scheduling)
 
   - Digital Electronics - Shift Registers  
     [(https://www.tutorialspoint.com/digital_electronics/digital_electronics_shift_registers.htm)](https://www.tutorialspoint.com/digital_electronics/digital_electronics_shift_registers.htm)
