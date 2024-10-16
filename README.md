@@ -700,12 +700,18 @@ endmodule
   <details>
   <summary>Detail</summary>
 	  
-  > CASE 1 <br>
+  CASE 1 <br>
+  > Input <br>
 	![Input 1](https://github.com/sai-147/S2_T12/blob/main/Snapshots/input_1.png?raw=true) <br>
+  > Output <br>
   	![Output 1](https://github.com/sai-147/S2_T12/blob/main/Snapshots/output%201.png?raw=true) <br>
 
-  > CASE 2 <br>
+   ---
+
+  CASE 2 <br>
+   > Input <br>
   	![Input 2](https://github.com/sai-147/S2_T12/blob/main/Snapshots/input%202.png?raw=true) <br>
+    > Output <br>
    	![Output 2](https://github.com/sai-147/S2_T12/blob/main/Snapshots/output%202.png?raw=true) <br>
   </details>
 
