@@ -130,7 +130,47 @@ _Figure 2: 3-Bit Down Counter (7 to 0)_
 <details>
   <summary>Detail</summary>
 
-  > Neatly update the Verilog code using code style only.
+  ### Gate-level modeling
+
+  ```Verilog
+  module Priority_Seat_Allocation (
+      input [6:0] candidate,      // 7 candidate inputs
+      input [3:0] scores,         // Score inputs for each candidate
+      input clk,                  // Clock signal
+      input load,                 // Load signal
+      input store,                // Store signal
+      input clear,                // Clear signal
+      output reg [6:0] tokens,    // Output tokens
+      output reg [3:0] selected   // Selected candidate based on priority
+  );
+
+  reg [3:0] candidate_scores [0:6]; // Array to hold scores for candidates
+
+  always @(posedge clk) begin
+      if (clear) begin
+          tokens <= 7'b0; // Clear tokens
+          selected <= 4'b0; // Clear selected candidate
+      end
+      if (load) begin
+          candidate_scores[candidate] <= scores; // Load scores for candidates
+      end
+      if (store) begin
+          // Logic to calculate tokens based on loaded scores
+          // (example logic)
+          tokens <= tokens + 1; // Update tokens
+      end
+  end
+
+  always @(*) begin
+      // Comparator logic for determining selected candidate based on scores
+      // Implement bitonic sort or another selection logic here
+      // For example:
+      selected = (candidate_scores[0] > candidate_scores[1]) ? 0 : 1; // Simple comparison for demonstration
+  end
+  endmodule
+
+
+  
 </details>
 
 ## References
