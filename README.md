@@ -672,6 +672,7 @@ module main_tb;
     end 
 endmodule
 ```
+</details>
 
 ## References
 <details>
