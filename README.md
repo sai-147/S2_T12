@@ -134,7 +134,7 @@ _Figure 2: 3-Bit Down Counter (7 to 0)_
   - Verilog Basics <br>
 	[https://www.chipverify.com/verilog/verilog-tutorial](https://www.chipverify.com/verilog/verilog-tutorial)
 
-  - Digital System Design: Bitonic Sorter
+  - Digital System Design: Bitonic Sorter <br>
 	[https://digitalsystemdesign.in/bitonic-sorter/](https://digitalsystemdesign.in/bitonic-sorter/)
 
   - Priority-Based Scheduling in Embedded Systems Design  
