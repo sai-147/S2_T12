@@ -96,7 +96,7 @@
 <details>
   <summary>Detail</summary>
 
-  - Verilog Basics
+  - Verilog Basics <br>
 	[https://www.chipverify.com/verilog/verilog-tutorial](https://www.chipverify.com/verilog/verilog-tutorial)
 
   - Digital System Design: Bitonic Sorter
