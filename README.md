@@ -49,9 +49,43 @@
 <details>
   <summary>Detail</summary>
 
-  > Explain how your model works with the help of a functional table (compulsory) followed by the flowchart. 
+The following components were used in the design:
+
+- **Switches (D1 to D7)**: These switches are used to take input from candidates. The score switches (D1 to D4) are particularly used for score calculation.
+- **Registers**: Registers store the candidates' scores and token values.
+- **Down Counter**: This component counts down from the number of candidates (ranging from 1 to 7) to 0, determining the token values.
+- **Comparator**: The Bitonic sorting algorithm compares the candidates' scores to rank them.
+- **Clock, Load, Store, Clear, Enable Switches**: These control the input/output processes, clock signals, and data storage.
+- **Bitonic Sorter**: A hardware-based comparator for sorting scores and determining the top 3 candidates based on their scores.
+- **MUX (Multiplexer)**: This is a digital switch that selects one of several input signals and forwards it to the output for comparison.
+- **Subtractor**: It calculates the difference between two binary numbers, assisting in score comparison.
+- **Bit Extender**: Extends the bit-width of input data to match the desired format for processing.
+
+**Process Overview**:
+1. Candidates input their values using switches D1 to D7.
+2. The number of candidates is loaded into the down counter using the `load` and `clock` switches.
+3. Scores are input using switches D1 to D4 and stored in corresponding registers.
+4. The Bitonic sorting algorithm compares scores to identify the top 3 candidates, breaking ties based on token values.
+5. The results are displayed, prioritizing candidates with higher scores or, in the event of a tie, those with lower token values.
+
+---
+
+![Score Calculation Truth Table](Score_Calculation.png)
+_Figure: Truth Table for Score Calculation_
+
+The simplified boolean expressions for the score calculation switches when the score switch is `1` are as follows:
+- **B3** = D3 D4 + D1 D2 D4
+- **B2** = D3 D'4 + D'1 D'3 D4 + D'2 D'3 D4 + D1 D2 D'4
+- **B1** = D'1 D2 + D2 D3 + D1 D'2 D'3
+- **B0** = D'1 D'3 + D1 D3
+
+---
+
+![3-Bit Down Counter](3bit_down_counter.png)
+_Figure: 3-Bit Down Counter (7 to 0)_
 
 </details>
+
 
 <!-- Fourth Section -->
 ## Logisim Circuit Diagram
