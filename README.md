@@ -132,6 +132,9 @@ _Figure 2: 3-Bit Down Counter (7 to 0)_
 
   ### Gate-level modeling
 
+  <details>
+  <summary>Detail</summary>
+
 ```Verilog
 `ifndef SCORE_V
 `define SCORE_V
@@ -434,6 +437,7 @@ module sort_last_4_bits (
 
 endmodule
 ```
+</details>
   ### Behavioural modeling
   ```Verilog
 module main (
