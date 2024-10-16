@@ -71,8 +71,8 @@ The following components were used in the design:
 
 ---
 
-![Score_Calculation.png](https://github.com/sai-147/S2_T12/blob/main/Snapshots/Down%20Counter_Truth%20Table.png?raw=true)
-_Figure: Truth Table for Score Calculation_
+![Score Calculation Truth Table](https://github.com/sai-147/S2_T12/blob/main/Snapshots/Score%20Calculation_Truth%20Table.png?raw=true)
+_Figure 1: Truth Table for Score Calculation_
 
 The simplified boolean expressions for the score calculation switches when the score switch is `1` are as follows:
 - **B3** = D3 D4 + D1 D2 D4
@@ -83,7 +83,7 @@ The simplified boolean expressions for the score calculation switches when the s
 ---
 
 ![3-Bit Down Counter](3bit_down_counter.png)
-_Figure: 3-Bit Down Counter (7 to 0)_
+_Figure 2: 3-Bit Down Counter (7 to 0)_
 
 </details>
 
