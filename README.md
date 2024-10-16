@@ -169,7 +169,7 @@ _Figure 2: 3-Bit Down Counter (7 to 0)_
   end
   endmodule
 
-
+  ```Verilog
   
 </details>
 
