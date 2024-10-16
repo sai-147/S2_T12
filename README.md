@@ -63,9 +63,26 @@
   
   ### Counter Circuit
   ![Token Counter Circuit](https://github.com/sai-147/S2_T12/blob/main/Snapshots/Counter.png?raw=true)
-</details>
 
 
+  ### Score Calculator Circuit
+  ![Score Calculator](https://github.com/sai-147/S2_T12/blob/main/Snapshots/score%20calculator.png?raw=true)
+
+  ### Register Circuit
+  > Storing score and token for each candidate in the Registers <br>
+
+  ![Register](https://github.com/sai-147/S2_T12/blob/main/Snapshots/Register.png?raw=true)
+
+  ### Bitonic Comparator (1) Circuit
+  ![BN1](https://github.com/sai-147/S2_T12/blob/main/Snapshots/BN1.png?raw=true)
+
+  ### Bitonic Comparator (2) Circuit
+  ![BN2](https://github.com/sai-147/S2_T12/blob/main/Snapshots/BN2.png?raw=true)
+
+  ### Sorting Circuit
+  ![Comparator](https://github.com/sai-147/S2_T12/blob/main/Snapshots/comparator.png?raw=true)
+  
+  </details>
 
 <!-- Fifth Section -->
 ## Verilog Code
