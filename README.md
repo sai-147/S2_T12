@@ -100,7 +100,7 @@ _Figure 2: 3-Bit Down Counter (7 to 0)_
   <summary>Detail</summary>
 
   ### Main Circuit
-  ![Main Circuit](https://github.com/sai-147/S2_T12/blob/main/Snapshots/main.png?raw=true) <br>
+  ![Main Circuit](https://github.com/sai-147/S2_T12/blob/main/Snapshots/main%20Ckt.png?raw=true) <br>
   
   ### Counter Circuit
   ![Token Counter Circuit](https://github.com/sai-147/S2_T12/blob/main/Snapshots/Counter.png?raw=true)
