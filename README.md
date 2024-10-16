@@ -112,13 +112,13 @@ _Figure 2: 3-Bit Down Counter (7 to 0)_
   ### Register Circuit
   > Storing score and token for each candidate in the Registers <br>
 
-  ![Register](https://github.com/sai-147/S2_T12/blob/main/Snapshots/Register.png?raw=true)
+  ![Register](https://github.com/sai-147/S2_T12/blob/main/Snapshots/Register8.png?raw=true)
 
   ### Bitonic Comparator (1) Circuit
-  ![BN1](https://github.com/sai-147/S2_T12/blob/main/Snapshots/BN1.png?raw=true)
+  ![BN1](https://github.com/sai-147/S2_T12/blob/main/Snapshots/BN%201.png?raw=true)
 
   ### Bitonic Comparator (2) Circuit
-  ![BN2](https://github.com/sai-147/S2_T12/blob/main/Snapshots/BN2.png?raw=true)
+  ![BN2](https://github.com/sai-147/S2_T12/blob/main/Snapshots/BN%202.png?raw=true)
 
   ### Sorting Circuit
   ![Comparator](https://github.com/sai-147/S2_T12/blob/main/Snapshots/comparator.png?raw=true)
