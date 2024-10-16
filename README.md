@@ -445,6 +445,11 @@ endmodule
 	  
   #### Main module
   ```Verilog
+//Team: S2-T12
+//Team members:
+//Parihasa K Reddy 231CS239
+//R Sairam 231CS245
+//Rishi Ramesh 231CS248 
 module main (
     input [3:0] n,
     input [3:0] c1, c2, c3, c4, c5, c6, c7,
