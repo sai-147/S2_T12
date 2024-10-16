@@ -96,11 +96,14 @@
 <details>
   <summary>Detail</summary>
 
-  - Verilog Basics 
-    [(https://www.chipverify.com/verilog/verilog-tutorial)](https://www.chipverify.com/verilog/verilog-tutorial)
+  - Verilog Basics
 
-  - M. Morris Mano and Michael D. Ciletti  
-    [(https://ia800607.us.archive.org/3/items/DigitalLogicAndComputerDesignByM.MorrisMano2ndEdition/Digital%20Logic%20And%20Computer%20Design%20By%20M.%20Morris%20Mano%20%282nd%20Edition%29.pdf)](https://ia800607.us.archive.org/3/items/DigitalLogicAndComputerDesignByM.MorrisMano2ndEdition/Digital%20Logic%20And%20Computer%20Design%20By%20M.%20Morris%20Mano%20%282nd%20Edition%29.pdf)
+[(https://www.chipverify.com/verilog/verilog-tutorial)](https://www.chipverify.com/verilog/verilog-tutorial)
+
+  - Digital System Design: Bitonic Sorter
+
+[(https://digitalsystemdesign.in/bitonic-sorter/)]
+(https://digitalsystemdesign.in/bitonic-sorter/)
 
   - Verilog Tutorial  
     [(https://www.asic-world.com/verilog/veritut.html)](https://www.asic-world.com/verilog/veritut.html)
