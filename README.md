@@ -740,7 +740,7 @@ endmodule
 
 </details>
 
-## Team Details
+## Hardware implementation
 <details>
   <summary>Detail</summary>
 	
