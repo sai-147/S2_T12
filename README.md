@@ -773,6 +773,7 @@ Managing waiting lists based on priority is essential in critical resource alloc
 
 ## References
 <summary>Detail</summary>
+<details>
 
   - Verilog Basics <br>
 	[https://www.chipverify.com/verilog/verilog-tutorial](https://www.chipverify.com/verilog/verilog-tutorial)
