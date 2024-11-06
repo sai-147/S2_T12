@@ -743,10 +743,8 @@ endmodule
 <details>
   <summary>Detail</summary>
 
-  ### Motivation
-In many real-time systems, such as seat allocation in transportation or event management, it is crucial to ensure that resource allocation is done promptly and fairly, prioritizing individuals based on predefined criteria. A priority-based allocation system ensures that individuals with higher importance—such as urgent needs, loyalty status, or special permissions—are given preference when resources, like seats, are limited.
-
-A hardware-based solution for priority-based seat allocation ensures faster decision-making and enhances reliability in dynamic and time-sensitive environments. This system can be vital when delays or inefficient resource management could lead to dissatisfaction, safety risks, or lost opportunities.
+  ### Input module
+The system has 7 decimal inputs and several control switches (candidate, clear, clock, load, store, enable). We select 1-7 candidates via switches (D1-D7), store the selected candidate using the store button, and load the number of candidates into a down counter with the load and clock switches.
 
 ---
   
