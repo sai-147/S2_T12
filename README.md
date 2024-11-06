@@ -753,7 +753,7 @@ endmodule
 
 
 
-## Hardware implementation
+## Hardware Implementation
 <details>
   <summary>Detail</summary>
 
