@@ -766,7 +766,12 @@ The hardware system has 2 decimal inputs and several control switches (candidate
 ---
   
   ### Registers
-Registers are built using D-flip flops to store the number of candidates and their scores, this module plays important part 
+Registers are built using D-flip flops to store the number of candidates and their scores, this module plays important part cause this values are then used to compare and assign seats, by turning clean on and off we can free the space and assign new values to them. As we are using maximum 2 candidates we are not going to use token generator, as there is no need for tokens here.
+
+---
+
+  ### Comparator
+Comparator IC is used to compare the score stored in registers, and output is connected to the display such a way it display the maximum scored candidate number, after the cycle is down clear can be turned on and off and the process can be started again, this can extended to real life applicable device just by adding proper inputs and including token generator and more complex comparator.
 
 ---
 
