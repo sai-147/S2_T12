@@ -100,22 +100,24 @@ _Figure 2: 3-Bit Down Counter (7 to 0)_
   <summary>Detail</summary>
 
   ### Input module
-The system has 7 decimal inputs and several control switches (candidate, clear, clock, load, store, enable). We select 1-7 candidates via switches (D1-D7), store the selected candidate using the store button, and load the number of candidates into a down counter with the load and clock switches.
+The system has 7 decimal inputs and several control switches (candidate, clear, clock, load, store, enable). We select 1-7 candidates via switches (D1-D7), store the selected candidate using the store button, and load the number of candidates into a up counter with the load and clock switches.
 
 ---
   
-  ### Counter module
-This module have 
+  ### Counter and token module
+This module is built to store the number of candidates and pass the values to token generator, which generate token for each candidate after each clock pulse, which is used while comaparing the scores and assigning seats. This counter works as up counter with number of candidates as maximum count value. 
 
 ---
 
-  ### Features
-- **Real-Time Priority Assignment**: Assign real-time seats based on priority levels.
-- **Hardware-Based Implementation**: Utilizes digital circuits for efficient processing.
-- **Dynamic Request Handling**: Adapts to changing request priorities effectively.
-- **Scalability and Adaptability**: Designed to accommodate varying system demands.
-</details>
+  ### Score module
+This module is built to calculate the score for candidates, after loading the number of candidates into counter, score module gets auto activated, switches D1 to D4 are used to calculate score, when we turn on switches the total score gets calculated in this score module and each candidate score is attached with his token number and passed to store in the register.  
 
+---
+
+  ### Comparator module
+This module is built to compare the scores of candidates and sort them in an order to select top score holders of the candidates, design of this module is inspired by bitonic sort algorithm, and we added few more features to the original circuit to address a special and most important case where scores are equal. When scores are equal, token part of the stored values gets compared and least token number(candidate who entered his score first) is assigned as high priority than the other candidate. 
+
+---
 
 <!-- Fourth Section -->
 ## Logisim Circuit Diagram
