@@ -772,22 +772,23 @@ Managing waiting lists based on priority is essential in critical resource alloc
 </details>
 
 ## References
-<details>
-  <summary>Detail</summary>
+<summary>Detail</summary>
 
   - Verilog Basics <br>
+	[https://www.chipverify.com/verilog/verilog-tutorial](https://www.chipverify.com/verilog/verilog-tutorial)
 	
 
   - Digital System Design: Bitonic Sorter <br>
+	[https://digitalsystemdesign.in/bitonic-sorter/](https://digitalsystemdesign.in/bitonic-sorter/)
 	
 
   - Priority-Based Scheduling in Embedded Systems Design  
+	[https://library.fiveable.me/key-terms/embedded-systems-design/priority-based-scheduling](https://library.fiveable.me/key-terms/embedded-systems-design/priority-based-scheduling)
 	
   - Digital Design With An Introduction To The VHDL  
+	[https://drive.google.com/file/d/0B3zMDnkiDz0MNVc4d040VE9qWGM/edit?resourcekey=0--PxnK4Y1ikmWLs4giZydXg](https://drive.google.com/file/d/0B3zMDnkiDz0MNVc4d040VE9qWGM/edit?resourcekey=0--PxnK4Y1ikmWLs4giZydXg)
 	
-
 </details>
-
 
 
 </details>
