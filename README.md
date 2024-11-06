@@ -756,16 +756,17 @@ endmodule
 ## Hardware Implementation
 <details>
   <summary>Detail</summary>
-
-  ### Motivation
-In many real-time systems, such as seat allocation in transportation or event management, it is crucial to ensure that resource allocation is done promptly and fairly, prioritizing individuals based on predefined criteria. A priority-based allocation system ensures that individuals with higher importance—such as urgent needs, loyalty status, or special permissions—are given preference when resources, like seats, are limited.
-
-A hardware-based solution for priority-based seat allocation ensures faster decision-making and enhances reliability in dynamic and time-sensitive environments. This system can be vital when delays or inefficient resource management could lead to dissatisfaction, safety risks, or lost opportunities.
+  Efforts have been made to impliment the whole circuit in a simple way, so the total numbers of maximum candidates we can take inputs is reduced to 2, and sorting, token generation, counter modules are replaced by simple logic gates and storing units are built using flip-flops, score calucator module is kept as it is but total number of types of scores a candidate can get is reduced.
+	
+---
+	
+  ### Input
+The hardware system has 2 decimal inputs and several control switches (candidate, clear, clock, load, store, enable). We select 1 or 2 candidates via switches (D1-D2), store the selected candidate using the store button, and load the number of candidates with the load and clock switches.
 
 ---
   
-  ### Problem Statement
-Managing waiting lists based on priority is essential in critical resource allocation environments like healthcare and transportation. Conventional first-come, first-served methods neglect urgency, leading to inefficiencies. This project proposes a digital system for automated seat assignment that prioritizes requests, ensuring timely service and optimal resource utilization.
+  ### Registers
+Registers are built using D-flip flops to store the number of candidates and their scores, this module plays important part 
 
 ---
 
