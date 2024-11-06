@@ -118,7 +118,7 @@ This module is built to calculate the score for candidates, after loading the nu
 This module is built to compare the scores of candidates and sort them in an order to select top score holders of the candidates, design of this module is inspired by bitonic sort algorithm, and we added few more features to the original circuit to address a special and most important case where scores are equal. When scores are equal, token part of the stored values gets compared and least token number(candidate who entered his score first) is assigned as high priority than the other candidate. 
 
 ---
-<details>
+</details>
 
 <!-- Fourth Section -->
 ## Logisim Circuit Diagram
