@@ -727,34 +727,64 @@ endmodule
   <summary>Detail</summary>
 
   - Verilog Basics <br>
-	[https://www.chipverify.com/verilog/verilog-tutorial](https://www.chipverify.com/verilog/verilog-tutorial)
+	
 
   - Digital System Design: Bitonic Sorter <br>
-	[https://digitalsystemdesign.in/bitonic-sorter/](https://digitalsystemdesign.in/bitonic-sorter/)
+	
 
   - Priority-Based Scheduling in Embedded Systems Design  
-	[https://library.fiveable.me/key-terms/embedded-systems-design/priority-based-scheduling](https://library.fiveable.me/key-terms/embedded-systems-design/priority-based-scheduling)
-
+	
   - Digital Design With An Introduction To The VHDL  
-	[https://drive.google.com/file/d/0B3zMDnkiDz0MNVc4d040VE9qWGM/edit?resourcekey=0--PxnK4Y1ikmWLs4giZydXg](https://drive.google.com/file/d/0B3zMDnkiDz0MNVc4d040VE9qWGM/edit?resourcekey=0--PxnK4Y1ikmWLs4giZydXg)
+	
 
 </details>
+
+## Design
+<details>
+  <summary>Detail</summary>
+
+  ### Motivation
+In many real-time systems, such as seat allocation in transportation or event management, it is crucial to ensure that resource allocation is done promptly and fairly, prioritizing individuals based on predefined criteria. A priority-based allocation system ensures that individuals with higher importance—such as urgent needs, loyalty status, or special permissions—are given preference when resources, like seats, are limited.
+
+A hardware-based solution for priority-based seat allocation ensures faster decision-making and enhances reliability in dynamic and time-sensitive environments. This system can be vital when delays or inefficient resource management could lead to dissatisfaction, safety risks, or lost opportunities.
+
+---
+  
+  ### Problem Statement
+Managing waiting lists based on priority is essential in critical resource allocation environments like healthcare and transportation. Conventional first-come, first-served methods neglect urgency, leading to inefficiencies. This project proposes a digital system for automated seat assignment that prioritizes requests, ensuring timely service and optimal resource utilization.
+
+---
+
+  ### Features
+- **Real-Time Priority Assignment**: Assign real-time seats based on priority levels.
+- **Hardware-Based Implementation**: Utilizes digital circuits for efficient processing.
+- **Dynamic Request Handling**: Adapts to changing request priorities effectively.
+- **Scalability and Adaptability**: Designed to accommodate varying system demands.
+</details>
+
+
 
 ## Hardware implementation
 <details>
   <summary>Detail</summary>
-	
-  >Semester: 3rd Sem B. Tech. CSE
-	
-  >Section: S2
 
-  >Team ID: S2-T12
+  ### Motivation
+In many real-time systems, such as seat allocation in transportation or event management, it is crucial to ensure that resource allocation is done promptly and fairly, prioritizing individuals based on predefined criteria. A priority-based allocation system ensures that individuals with higher importance—such as urgent needs, loyalty status, or special permissions—are given preference when resources, like seats, are limited.
 
-  >Member-1: Parihasa K Reddy, 231CS239, <a href=""> parihasakreddy.231cs239@nitk.edu.in</a>
- 
-  >Member-2: R Sairam, 231CS245, <a href=""> sairam.231cs245@nitk.edu.in </a>
+A hardware-based solution for priority-based seat allocation ensures faster decision-making and enhances reliability in dynamic and time-sensitive environments. This system can be vital when delays or inefficient resource management could lead to dissatisfaction, safety risks, or lost opportunities.
+
+---
   
-  >Member-3: Rishi Ramesh, 231CS248,<a href=""> rishiramesh.231cs248@nitk.edu.in </a>
+  ### Problem Statement
+Managing waiting lists based on priority is essential in critical resource allocation environments like healthcare and transportation. Conventional first-come, first-served methods neglect urgency, leading to inefficiencies. This project proposes a digital system for automated seat assignment that prioritizes requests, ensuring timely service and optimal resource utilization.
+
+---
+
+  ### Features
+- **Real-Time Priority Assignment**: Assign real-time seats based on priority levels.
+- **Hardware-Based Implementation**: Utilizes digital circuits for efficient processing.
+- **Dynamic Request Handling**: Adapts to changing request priorities effectively.
+- **Scalability and Adaptability**: Designed to accommodate varying system demands.
 </details>
 
 
