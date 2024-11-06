@@ -1,4 +1,4 @@
-### Priority-Based Waiting List Confirmation in Transportation
+# Priority-Based Waiting List Confirmation in Transportation
 
 <!-- First Section -->
 ## Team Details
