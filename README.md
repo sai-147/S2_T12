@@ -50,6 +50,8 @@ Managing waiting lists based on priority is essential in critical resource alloc
 
 </details>
 
+
+
 <!-- Third Section -->
 ## Working
 <details>
@@ -91,6 +93,27 @@ The simplified boolean expressions for the score calculation switches when the s
 ![Down Counter Truth Table](https://github.com/sai-147/S2_T12/blob/main/Snapshots/Down%20Counter_Truth%20Table.png?raw=true) <br>
 _Figure 2: 3-Bit Down Counter (7 to 0)_
 
+</details>
+
+## Design
+<details>
+  <summary>Detail</summary>
+
+  ### Input module
+The system has 7 decimal inputs and several control switches (candidate, clear, clock, load, store, enable). We select 1-7 candidates via switches (D1-D7), store the selected candidate using the store button, and load the number of candidates into a down counter with the load and clock switches.
+
+---
+  
+  ### Problem Statement
+Managing waiting lists based on priority is essential in critical resource allocation environments like healthcare and transportation. Conventional first-come, first-served methods neglect urgency, leading to inefficiencies. This project proposes a digital system for automated seat assignment that prioritizes requests, ensuring timely service and optimal resource utilization.
+
+---
+
+  ### Features
+- **Real-Time Priority Assignment**: Assign real-time seats based on priority levels.
+- **Hardware-Based Implementation**: Utilizes digital circuits for efficient processing.
+- **Dynamic Request Handling**: Adapts to changing request priorities effectively.
+- **Scalability and Adaptability**: Designed to accommodate varying system demands.
 </details>
 
 
@@ -723,26 +746,7 @@ endmodule
 </details>
 
 
-## Design
-<details>
-  <summary>Detail</summary>
 
-  ### Input module
-The system has 7 decimal inputs and several control switches (candidate, clear, clock, load, store, enable). We select 1-7 candidates via switches (D1-D7), store the selected candidate using the store button, and load the number of candidates into a down counter with the load and clock switches.
-
----
-  
-  ### Problem Statement
-Managing waiting lists based on priority is essential in critical resource allocation environments like healthcare and transportation. Conventional first-come, first-served methods neglect urgency, leading to inefficiencies. This project proposes a digital system for automated seat assignment that prioritizes requests, ensuring timely service and optimal resource utilization.
-
----
-
-  ### Features
-- **Real-Time Priority Assignment**: Assign real-time seats based on priority levels.
-- **Hardware-Based Implementation**: Utilizes digital circuits for efficient processing.
-- **Dynamic Request Handling**: Adapts to changing request priorities effectively.
-- **Scalability and Adaptability**: Designed to accommodate varying system demands.
-</details>
 
 
 
