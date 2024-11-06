@@ -1,4 +1,4 @@
-# Priority-Based Waiting List Confirmation in Transportation
+Priority-Based Waiting List Confirmation in Transportation
 
 <!-- First Section -->
 ## Team Details
@@ -104,8 +104,8 @@ The system has 7 decimal inputs and several control switches (candidate, clear, 
 
 ---
   
-  ### Problem Statement
-Managing waiting lists based on priority is essential in critical resource allocation environments like healthcare and transportation. Conventional first-come, first-served methods neglect urgency, leading to inefficiencies. This project proposes a digital system for automated seat assignment that prioritizes requests, ensuring timely service and optimal resource utilization.
+  ### Counter module
+This module have 
 
 ---
 
