@@ -772,7 +772,7 @@ Managing waiting lists based on priority is essential in critical resource alloc
 </details>
 
 ## References
-<summary>Detail</summary>
+
 <details>
 
   - Verilog Basics <br>
