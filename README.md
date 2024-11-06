@@ -769,11 +769,6 @@ Managing waiting lists based on priority is essential in critical resource alloc
 
 ---
 
-  ### Features
-- **Real-Time Priority Assignment**: Assign real-time seats based on priority levels.
-- **Hardware-Based Implementation**: Utilizes digital circuits for efficient processing.
-- **Dynamic Request Handling**: Adapts to changing request priorities effectively.
-- **Scalability and Adaptability**: Designed to accommodate varying system demands.
 </details>
 
 ## References
