@@ -722,22 +722,6 @@ endmodule
 
 </details>
 
-## References
-<details>
-  <summary>Detail</summary>
-
-  - Verilog Basics <br>
-	
-
-  - Digital System Design: Bitonic Sorter <br>
-	
-
-  - Priority-Based Scheduling in Embedded Systems Design  
-	
-  - Digital Design With An Introduction To The VHDL  
-	
-
-</details>
 
 ## Design
 <details>
@@ -783,6 +767,23 @@ Managing waiting lists based on priority is essential in critical resource alloc
 - **Hardware-Based Implementation**: Utilizes digital circuits for efficient processing.
 - **Dynamic Request Handling**: Adapts to changing request priorities effectively.
 - **Scalability and Adaptability**: Designed to accommodate varying system demands.
+</details>
+
+## References
+<details>
+  <summary>Detail</summary>
+
+  - Verilog Basics <br>
+	
+
+  - Digital System Design: Bitonic Sorter <br>
+	
+
+  - Priority-Based Scheduling in Embedded Systems Design  
+	
+  - Digital Design With An Introduction To The VHDL  
+	
+
 </details>
 
 
