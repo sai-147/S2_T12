@@ -104,8 +104,8 @@ The system has 7 decimal inputs and several control switches (candidate, clear, 
 
 ---
   
-  ### Counter
-The up counter is built using a D-flip flop to count up to the number of candidates, The counter value decides where to store the current candidates score.
+  ### Counter and token module
+This module is built to store the number of candidates and pass the values to token generator, which generate token for each candidate after each clock pulse, which is used while comaparing the scores and assigning seats. This counter works as up counter with number of candidates as maximum count value. 
 
 ---
 
