@@ -759,7 +759,12 @@ endmodule
 
  
   Efforts have been made to impliment the whole circuit in a simple way, so the total numbers of maximum candidates we can take inputs is reduced to 2, and sorting, token generation, counter modules are replaced by simple logic gates and storing units are built using flip-flops, score calucator module is kept as it is but total number of types of scores a candidate can get is reduced.
-	
+  
+---
+
+  ## Counter
+The up counter is built using a D-flip flop to count up to the number of candidates, The counter value decides where to store the current candidates score.
+   
 ---
 	
   ### Input
